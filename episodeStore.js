@@ -707,3 +707,15 @@ const ds9Episodes = [
     { show: "Star Trek: Voyager", season: 7, episode: 25, name: "Endgame, Part I" },
     { show: "Star Trek: Voyager", season: 7, episode: 26, name: "Endgame, Part II" },
 ];
+const snwEpisodes = [
+    { show: 'snw', season: 1, episode: 1, name: 'Strange New Worlds' },
+    { show: 'snw', season: 1, episode: 2, name: 'Children of the Comet' },
+    { show: 'snw', season: 1, episode: 3, name: 'Ghosts of Illyria' },
+    { show: 'snw', season: 1, episode: 4, name: 'Memento Mori' },
+    { show: 'snw', season: 1, episode: 5, name: 'Spock Amok' },
+    { show: 'snw', season: 1, episode: 6, name: 'Lift Us Where Suffering Cannot Reach' },
+    { show: 'snw', season: 1, episode: 7, name: 'The Elysian Kingdom' },
+    { show: 'snw', season: 1, episode: 8, name: 'What Are Little Girls Made Of?' },
+    { show: 'snw', season: 1, episode: 9, name: 'All Those Who Wander' },
+    { show: 'snw', season: 1, episode: 10, name: 'A Quality of Mercy' }
+];

@@ -1,4 +1,5 @@
 const output = document.getElementById("output");
+
 const entStart = document.getElementById("ent-start-season");
 const entEnd = document.getElementById("ent-end-season");
 const entCheck = document.getElementById("ent-check");
@@ -18,6 +19,10 @@ const ds9Check = document.getElementById("ds9-check");
 const voyStart = document.getElementById("voy-start-season");
 const voyEnd = document.getElementById("voy-end-season");
 const voyCheck = document.getElementById("voy-check");
+
+const snwStart = document.getElementById("snw-start-season");
+const snwEnd = document.getElementById("snw-end-season");
+const snwCheck = document.getElementById("snw-check");
 
 let selectedEpisodes = [];
 
@@ -61,6 +66,15 @@ function getDs9Episodes() {
       });
     }
 
+
+    function getSnwEpisodes() {
+        snwEpisodes.forEach((episode) => {
+          if (episode.season >= snwStart.value && episode.season <= snwEnd.value) {
+            selectedEpisodes.push(episode);
+          }
+        });
+      }
+  
 function displayValues(episode) {
   document.getElementById(
     "output"
@@ -79,6 +93,7 @@ function main() {
   let includeTng = tngCheck.checked;
   let includeDs9 = ds9Check.checked;
   let includeVoy = voyCheck.checked;
+  let includeSnw = snwCheck.checked;
   console.log(includeEnt);
   if (includeEnt) {
     getEntEpisodes();
@@ -95,8 +110,11 @@ function main() {
   if (includeVoy) {
     getVoyEpisodes();
   }
+  if (includeSnw) {
+    getSnwEpisodes();
+  }
 
-  if (!includeTos && !includeEnt && !includeTng && !includeDs9 && !includeVoy) {
+  if (!includeTos && !includeEnt && !includeTng && !includeDs9 && !includeVoy && !includeSnw) {
     displayError();
   }else{
     displayValues(selectedEpisodes[Math.floor(Math.random() * selectedEpisodes.length)]);
