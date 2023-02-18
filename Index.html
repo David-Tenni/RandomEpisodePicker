@@ -1,0 +1,32 @@
+<html>
+<head>
+	<title>TV Series Form</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+	
+    <section class="series-section">
+        <label>
+            <input type="checkbox" name="series1">
+            The Original Series
+        </label><br>
+        From Season <input type="number" id="tos-start-season" value="1" class="short-field" min="1" max="3">
+        To Season <input type="number" id="tos-end-season" value="3" placeholder="Ending Season" class="short-field" min="1" max="3">
+    </section>
+
+    <section class="series-section">
+        <label>
+            <input type="checkbox" name="series2">
+            Enterprise
+        </label><br>
+        From Season <input type="number" id="ent-start-season" value="1" class="short-field" min="1" max="4">
+        To Season <input type="number" id="ent-end-season" value="4" class="short-field" min="1" max="4">
+    </section>
+    <button id="randomise">Randomise</button>
+    <p id="output">d</p>
+
+    <script type="text/javascript" src="episodeStore.js"> </script>
+    <script type="text/javascript" src="picker.js"> </script>
+
+</body>
+</html>
