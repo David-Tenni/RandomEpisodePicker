@@ -59,6 +59,7 @@ function main() {
   let includeEnt = entCheck.checked;
   let includeTos = tosCheck.checked;
   let includeTng = tngCheck.checked;
+  let includeDs9 = ds9Check.checked;
   console.log(includeEnt);
   if (includeEnt) {
     getEntEpisodes();
@@ -69,9 +70,13 @@ function main() {
   if (includeTng) {
     getTngEpisodes();
   }
+  if (includeDs9) {
+    getDs9Episodes();
+  }
   displayValues(
     selectedEpisodes[Math.floor(Math.random() * selectedEpisodes.length)]
   );
+  console.log(selectedEpisodes.length)
   selectedEpisodes = [];
 }
 const randomiseButton = document.getElementById("randomise");
