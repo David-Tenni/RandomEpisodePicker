@@ -15,6 +15,10 @@ const ds9Start = document.getElementById("ds9-start-season");
 const ds9End = document.getElementById("ds9-end-season");
 const ds9Check = document.getElementById("ds9-check");
 
+const voyStart = document.getElementById("voy-start-season");
+const voyEnd = document.getElementById("voy-end-season");
+const voyCheck = document.getElementById("voy-check");
+
 let selectedEpisodes = [];
 
 function getEntEpisodes() {
@@ -49,17 +53,32 @@ function getDs9Episodes() {
     });
   }
 
+  function getVoyEpisodes() {
+      voyEpisodes.forEach((episode) => {
+        if (episode.season >= voyStart.value && episode.season <= voyEnd.value) {
+          selectedEpisodes.push(episode);
+        }
+      });
+    }
+
 function displayValues(episode) {
   document.getElementById(
     "output"
   ).innerHTML = `You should try watching: ${episode.show} Season ${episode.season} Episode ${episode.episode} ${episode.name} `;
 }
 
+function displayError() {
+    document.getElementById(
+      "output"
+    ).innerHTML = `Please select the series you want to include`;
+  }
+
 function main() {
   let includeEnt = entCheck.checked;
   let includeTos = tosCheck.checked;
   let includeTng = tngCheck.checked;
   let includeDs9 = ds9Check.checked;
+  let includeVoy = voyCheck.checked;
   console.log(includeEnt);
   if (includeEnt) {
     getEntEpisodes();
@@ -73,9 +92,17 @@ function main() {
   if (includeDs9) {
     getDs9Episodes();
   }
-  displayValues(
-    selectedEpisodes[Math.floor(Math.random() * selectedEpisodes.length)]
-  );
+  if (includeVoy) {
+    getVoyEpisodes();
+  }
+
+  if (!includeTos && !includeEnt && !includeTng && !includeDs9 && !includeVoy) {
+    displayError();
+  }else{
+    displayValues(selectedEpisodes[Math.floor(Math.random() * selectedEpisodes.length)]);
+  }
+
+  
   console.log(selectedEpisodes.length)
   selectedEpisodes = [];
 }
