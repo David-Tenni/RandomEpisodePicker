@@ -8,7 +8,7 @@
 <body>
     <section class="series-section">
         <label>
-            <input id="tos-check" type="checkbox" name="series1" />
+            <input id="tos-check" type="checkbox" />
             The Original Series </label><br />
         From Season
         <input type="number" id="tos-start-season" value="1" class="short-field" min="1" max="3" />
@@ -19,7 +19,7 @@
 
     <section class="series-section">
         <label>
-            <input id="ent-check" type="checkbox" name="series2" />
+            <input id="ent-check" type="checkbox" />
             Enterprise </label><br />
         From Season
         <input type="number" id="ent-start-season" value="1" class="short-field" min="1" max="4" />
@@ -29,7 +29,7 @@
     
     <section class="series-section">
         <label>
-            <input id="tng-check" type="checkbox" name="series2" />
+            <input id="tng-check" type="checkbox" />
             The Next Generation </label><br />
         From Season
         <input type="number" id="tng-start-season" value="1" class="short-field" min="1" max="7" />
@@ -39,7 +39,7 @@
 
     <section class="series-section">
         <label>
-            <input id="ds9-check" type="checkbox" name="series2" />
+            <input id="ds9-check" type="checkbox" />
             Deep Space 9 </label><br />
         From Season
         <input type="number" id="ds9-start-season" value="1" class="short-field" min="1" max="7" />
@@ -50,8 +50,8 @@
     
     <section class="series-section">
         <label>
-            <input id="voy-check" type="checkbox" name="series2" />
-            Voyager </label><br />
+        <input id="voy-check" type="checkbox" />
+        Voyager </label><br />
         From Season
         <input type="number" id="voy-start-season" value="1" class="short-field" min="1" max="7" />
         To Season
@@ -61,14 +61,33 @@
     
     <section class="series-section">
         <label>
-            <input id="snw-check" type="checkbox" name="series2" />
-            Strange New Worlds </label><br />
+        <input id="snw-check" type="checkbox" />
+        Strange New Worlds </label><br />
         From Season
         <input type="number" id="snw-start-season" value="1" class="short-field" min="1" max="1" />
         To Season
         <input type="number" id="snw-end-season" value="1" class="short-field" min="1" max="1" />
     </section>
+   
+    <section class="series-section">
+        <label>
+        <input id="pic-check" type="checkbox" />
+        Strange Picard </label><br />
+        From Season
+        <input type="number" id="pic-start-season" value="1" class="short-field" min="1" max="2" />
+        To Season
+        <input type="number" id="pic-end-season" value="2" class="short-field" min="1" max="2" />
+    </section>
     
+    <section class="series-section">
+        <label>
+        <input id="std-check" type="checkbox" />
+        Star Trek Discovery </label><br />
+        From Season
+        <input type="number" id="std-start-season" value="1" class="short-field" min="1" max="4" />
+        To Season
+        <input type="number" id="std-end-season" value="4" class="short-field" min="1" max="4" />
+    </section>
     
     
     <button id="randomise">Randomise</button>
