@@ -32,6 +32,18 @@ const stdStart = document.getElementById("std-start-season");
 const stdEnd = document.getElementById("std-end-season");
 const stdCheck = document.getElementById("std-check");
 
+const lwdStart = document.getElementById("lwd-start-season");
+const lwdEnd = document.getElementById("lwd-end-season");
+const lwdCheck = document.getElementById("lwd-check");
+
+const tasStart = document.getElementById("tas-start-season");
+const tasEnd = document.getElementById("tas-end-season");
+const tasCheck = document.getElementById("tas-check");
+
+const proStart = document.getElementById("pro-start-season");
+const proEnd = document.getElementById("pro-end-season");
+const proCheck = document.getElementById("pro-check");
+
 let selectedEpisodes = [];
 
 function getEntEpisodes() {
@@ -98,7 +110,33 @@ function getDs9Episodes() {
           }
         });
       }
+    
+      function getLwdEpisodes() {
+        lwdEpisodes.forEach((episode) => {
+          if (episode.season >= lwdStart.value && episode.season <= lwdEnd.value) {
+            selectedEpisodes.push(episode);
+          }
+        });
+      }
+    
+      function getTasEpisodes() {
+        tasEpisodes.forEach((episode) => {
+          if (episode.season >= tasStart.value && episode.season <= tasEnd.value) {
+            selectedEpisodes.push(episode);
+          }
+        });
+      }
+    
+      function getProEpisodes() {
+        proEpisodes.forEach((episode) => {
+          if (episode.season >= proStart.value && episode.season <= proEnd.value) {
+            selectedEpisodes.push(episode);
+          }
+        });
+      }
   
+
+
 function displayValues(episode) {
   document.getElementById(
     "output"
@@ -120,6 +158,9 @@ function main() {
   let includeSnw = snwCheck.checked;
   let includePic = picCheck.checked;
   let includeStd = stdCheck.checked;
+  let includeLwd = lwdCheck.checked;
+  let includeTas = tasCheck.checked;
+  let includePro = proCheck.checked;
   
   if (includeEnt) {
     getEntEpisodes();
@@ -145,8 +186,17 @@ function main() {
   if (includeStd) {
     getStdEpisodes();
   }
+  if (includeLwd) {
+    getLwdEpisodes();
+  }
+  if (includeTas) {
+    getTasEpisodes();
+  }
+  if (includePro) {
+    getProEpisodes();
+  }
 
-  if (!includeTos && !includeEnt && !includeTng && !includeDs9 && !includeVoy && !includeSnw && !includePic && !includeStd) {
+  if (!includeTos && !includeEnt && !includeTng && !includeDs9 && !includeVoy && !includeSnw && !includePic && !includeStd && !includeLwd && !includeTas && !includePro) {
     displayError();
   }else{
     displayValues(selectedEpisodes[Math.floor(Math.random() * selectedEpisodes.length)]);
