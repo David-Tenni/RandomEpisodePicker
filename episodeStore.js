@@ -808,6 +808,15 @@ const picEpisodes = [
     { show: "Star Trek: Picard", season: 2, episode: 9, name: 'Hide and Seek' },
     { show: "Star Trek: Picard", season: 2, episode: 10, name: 'Farewell' },
     { show: "Star Trek: Picard", season: 3, episode: 1, name: 'The Next Generation' },
+    { show: "Star Trek: Picard", season: 3, episode: 2, name: 'Disengage' },
+    { show: "Star Trek: Picard", season: 3, episode: 3, name: 'seventeen Seconds' },
+    { show: "Star Trek: Picard", season: 3, episode: 4, name: 'No Win Scenario' },
+    { show: "Star Trek: Picard", season: 3, episode: 5, name: 'Imposters' },
+    { show: "Star Trek: Picard", season: 3, episode: 6, name: 'The Bounty' },
+    { show: "Star Trek: Picard", season: 3, episode: 7, name: 'Dominion' },
+    { show: "Star Trek: Picard", season: 3, episode: 8, name: 'Surrender' },
+    { show: "Star Trek: Picard", season: 3, episode: 9, name: 'Vox' },
+    { show: "Star Trek: Picard", season: 3, episode: 10, name: 'The Last Generation' },
   ];
 
   const tasEpisodes = [
