@@ -1,14 +1,18 @@
 .container {
-    max-width: 400px;
-    margin: 0 auto;
-  }
-  
-  .series-section {
-    margin: 10px 0;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+
+.series-section {
+  flex-basis: calc(33.33% - 20px);
+  margin: 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
   
   .series-section label {
     display: flex;
@@ -16,12 +20,13 @@
   }
   
   .short-field {
-    width: 40px;
+    width: 30px;
   }
   
   #randomise {
     display: inline-block;
     padding: 10px 20px;
+    flex-basis: calc(33.33% );
     font-size: 18px;
     font-weight: bold;
     color: #fff;
@@ -31,6 +36,11 @@
     cursor: pointer;
   }
   
+  #output-div{
+    display: flex;
+    justify-content: center;
+  }
+
   #randomise:hover {
     background-color: #0069d9;
   }
