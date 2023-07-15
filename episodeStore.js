@@ -717,7 +717,17 @@ const snwEpisodes = [
     { show: "Star Trek: Strange New Worlds", season: 1, episode: 7, name: 'The Elysian Kingdom' },
     { show: "Star Trek: Strange New Worlds", season: 1, episode: 8, name: 'What Are Little Girls Made Of?' },
     { show: "Star Trek: Strange New Worlds", season: 1, episode: 9, name: 'All Those Who Wander' },
-    { show: "Star Trek: Strange New Worlds", season: 1, episode: 10, name: 'A Quality of Mercy' }
+    { show: "Star Trek: Strange New Worlds", season: 1, episode: 10, name: 'A Quality of Mercy' },
+    { show: "Star Trek: Strange New Worlds", season: 2, episode: 1, name: 'The Broken Circle' },
+    { show: "Star Trek: Strange New Worlds", season: 2, episode: 2, name: 'Ad Astra per Aspera' },
+    { show: "Star Trek: Strange New Worlds", season: 2, episode: 3, name: 'Tomorrow and Tomorrow and Tomorrow' },
+    { show: "Star Trek: Strange New Worlds", season: 2, episode: 4, name: 'Among the Lotus Eaters' },
+    { show: "Star Trek: Strange New Worlds", season: 2, episode: 5, name: 'Charades' },
+    { show: "Star Trek: Strange New Worlds", season: 2, episode: 6, name: 'Lost in Translation' },
+    { show: "Star Trek: Strange New Worlds", season: 2, episode: 7, name: 'Those Old Scientists' },
+    { show: "Star Trek: Strange New Worlds", season: 2, episode: 8, name: 'Under the Cloak of War' },
+    { show: "Star Trek: Strange New Worlds", season: 2, episode: 9, name: 'Subspace Rhapsody' },
+    { show: "Star Trek: Strange New Worlds", season: 2, episode: 10, name: 'Hegemony' }
 ];
 
 const stdEpisodes = [
